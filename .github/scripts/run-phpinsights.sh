@@ -1,2 +1,2 @@
 #!/bin/sh
-./vendor/bin/phpinsights --no-interaction --min-quality=80 --min-complexity=80 --min-architecture=80 --min-style=80
+./vendor/bin/phpinsights --no-interaction --min-quality=70 --min-complexity=70 --min-architecture=70 --min-style=70
