@@ -19,6 +19,9 @@ jobs:
       - name: Setting up PHP
         uses: ./.github/actions/php
 
+      - name: Permissions
+        run: chmod -R 777 ./.github/scripts
+
       - name: Installing Composer
         run: ./.github/scripts/run-composer.sh
 
@@ -28,5 +31,5 @@ jobs:
       - name: Running PHP Insights
         run: ./.github/scripts/run-phpinsights.sh
 
-      - name: Running Tests from Codeception
-        run: ./.github/scripts/run-codeception.sh
+      #- name: Running Tests from Codeception
+      #  run: ./.github/scripts/run-codeception.sh
