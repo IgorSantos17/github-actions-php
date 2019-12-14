@@ -1,0 +1,52 @@
+{
+    "name": "IgorSantos17/github-actions-php",
+    "description": "Integração Contínua em Projeto PHP Utilizando Github Actions.",
+    "keywords": ["framework", "laravel", "lumen"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": "^7.2",
+        "brazanation/documents": "2.0.*",
+        "laravel/lumen-framework": "^6.0"
+    },
+    "require-dev": {
+        "codeception/codeception": "^3.1",
+        "fzaninotto/faker": "^1.4",
+        "mockery/mockery": "^1.0",
+        "nunomaduro/phpinsights": "^1.11",
+        "phpstan/phpstan": "^0.11.19",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+        ],
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/"
+        ]
+    },
+    "scripts": {
+        "phpinsights": [
+            "vendor\\bin\\phpinsights"
+        ],
+        "phpstan": [
+            "vendor\\bin\\phpstan analyse app/http/controllers --level 7"
+        ],
+        "code-tests": [
+            "vendor\\bin\\codecept run api"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
